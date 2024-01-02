@@ -1,0 +1,17 @@
+.App {
+  padding: 50px 200px;
+}
+
+.select-wrap {
+  border: 1px solid black;
+}
+
+.select-box {
+  display: block;
+  margin: 10px 0;
+  width: 150px;
+}
+
+.search-btn {
+  cursor: pointer;
+}
