@@ -1,0 +1,81 @@
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 15px rgba(255, 94, 0, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(255, 94, 0, 1);
+  }
+}
+
+.rock-display-wrap {
+  grid-column: 1 / span 2;
+  position: relative;
+  box-sizing: border-box;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.rock-item {
+  position: relative;
+  border: 3px solid rgb(255, 94, 0);
+  padding: 5px;
+  border-radius: 8px;
+  margin: 2px;
+  text-align: center;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.rock-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.5);
+}
+.rock-item.lowest {
+  animation: pulse ease 1s alternate infinite;
+}
+.rock-item.lowest::after {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  content: "최저가";
+  color: rgb(255, 94, 0);
+  font-family: "NanumSquareNeoHeavy";
+  font-size: 16px;
+}
+.rock-item-title {
+  display: block;
+  margin-bottom: 15px;
+  font-family: "NanumSquareNeoHeavy";
+}
+.rock-item-price-label {
+  display: block;
+  font-size: 12px;
+}
+.rock-item-price {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-family: "NanumSquareNeoBold";
+}
+.rock-item-engrave {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 22px;
+  background-color: rgb(255, 94, 0);
+  color: white;
+  font-family: "NanumSquareNeoBold";
+  margin-top: 5px;
+  border-radius: 8px;
+}

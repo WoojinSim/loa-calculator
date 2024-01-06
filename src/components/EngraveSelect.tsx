@@ -2,11 +2,8 @@
 
 import React, { useEffect } from "react";
 
-interface EngraveProps {
-  Value: number;
-  Text: string;
-  Class?: string;
-}
+import { EngraveProps } from "../interfaces/APIInterface";
+
 interface EngraveSelectProps {
   index: number;
   engraveList: EngraveProps[] | undefined;
@@ -15,6 +12,7 @@ interface EngraveSelectProps {
 }
 
 const EngraveSelect: React.FC<EngraveSelectProps> = (props) => {
+  // console.log(props.engraveList);
   const handleComboBoxChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newArray = [...props.selectedEngrave];
     const splitString = e.target.value.split("|");

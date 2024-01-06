@@ -1,17 +1,108 @@
+body {
+  background-color: #f8f8f8;
+}
+
 .App {
-  padding: 50px 200px;
+  padding: 50px 150px;
+  font-family: "NanumSquareNeo";
+  justify-content: center;
+  justify-items: stretch;
+}
+
+.header {
+  padding: 40px;
+  font-family: "NanumSquareNeoHeavy";
+  font-size: 40px;
+}
+
+.container {
+  margin: 8px;
+  background-color: white;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .select-wrap {
+  padding: 30px;
+  box-sizing: border-box;
+}
+.select-box {
+  display: inline-block;
+  margin: 10px 0;
+  width: 19%;
+  font-size: 20px;
+}
+.select-inner-wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 20px;
+  justify-content: space-around;
+}
+.search-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 0;
+  cursor: pointer;
+  font-family: "NanumSquareNeoHeavy";
+  font-size: 20px;
+  width: 100px;
+  text-align: center;
+  border: 3px solid black;
+  border-radius: 6px;
+  transition: all 0.4s;
+}
+.search-btn:hover {
+  border: 3px solid rgb(255, 94, 0);
+  background-color: rgb(255, 94, 0);
+  color: white;
+}
+.case-display-wrap {
+  position: relative;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.case-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.case-display .engrave-item {
+  margin: 4px;
+  padding: 6px 14px;
+  background-color: rgb(255, 94, 0);
+  font-family: "NanumSquareNeo";
+  font-size: 20px;
+  color: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.case-display-title {
+  top: 10px;
+  left: 10px;
+  font-family: "NanumSquareNeoHeavy";
+}
+.case-item {
+  border-radius: 8px;
+  margin: 10px;
   border: 1px solid black;
 }
-
-.select-box {
-  display: block;
-  margin: 10px 0;
-  width: 150px;
+.case-item-title {
+  margin: 10px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid black;
 }
-
-.search-btn {
-  cursor: pointer;
+.gold-coin {
+  display: inline-block;
+  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/gold.png");
+  background-size: cover;
 }
